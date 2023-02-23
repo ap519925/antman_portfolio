@@ -24,6 +24,8 @@ const { href } = Astro.props;
 		background: var(--gradient-accent-orange);
 		box-shadow: var(--shadow-md);
 		white-space: nowrap;
+		transition : 500ms ease-in-out;
+        transform: translateY(0);
 	}
 
 	@media (min-width: 20em) {
@@ -41,10 +43,21 @@ const { href } = Astro.props;
 		transition: background-color var(--theme-transition);
 		mix-blend-mode: overlay;
 	}
-
+a:hover{
+	border-radius: 999rem;
+	transition: 500ms ease-in-out;
+	transform : translateY(-4px);
+	padding: 0.7em 2.8em;
+	-webkit-box-shadow: 0px 7px 30px -20px rgba(255, 255, 255, 0.704);
+    -moz-box-shadow: 0px 7px 30px -20px rgba(255, 255, 255, 0.704);
+    box-shadow-bott: 0px 7px 30px -20px rgba(255, 255, 255, 0.704);
+	}
 	a:focus::after,
+	
 	a:hover::after {
-		background-color: hsla(var(--gray-999-basis), 0.3);
+		background-color: hsla(var(--gray-999-basis), 0.5);
+		border-radius: 999rem;
+		
 	}
 
 	@media (min-width: 50em) {

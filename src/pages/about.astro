@@ -10,7 +10,7 @@ import Hero from '../components/Hero.astro';
 		<main class="wrapper about">
 			<Hero
 				title="About"
-				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+				tagline="Read below to learn a little bit more about me."
 			>
 				<img
 					width="1000"
@@ -23,20 +23,11 @@ import Hero from '../components/Hero.astro';
 			<section>
 				<h2 class="section-title">About me</h2>
 				<div class="content">
+					
 					<p>
-					 I am a web developer
-					</p>
-					<p>
-						Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis
-						natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl
-						condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel
-						quam elementum pulvinar etiam non.
-					</p>
-					<p>
-						Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet
-						eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra.
-						Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl
-						pretium fusce.
+						Hello everyone, my name is Anthony Phillips. I was born and raised in Albany NY, the capitol of NY state.
+						I've been living in Queens NYC since about 2016/17 working as a web developer & financial market analyst/trader.
+						I also run an Airbnb, and a few E-commerce shops. When I'm not working on projects, I greatly enjoy playing PC games, tennis, soccer, pickleball and with my dog bear.
 					</p>
 				</div>
 			</section>
@@ -49,7 +40,60 @@ import Hero from '../components/Hero.astro';
 			<section>
 				<h2 class="section-title">Skills</h2>
 				<div class="content">
-					<p>officia unde omnis</p>
+					<div class="pillnav">
+						<h2 class="pillhead">Programming Languages & other Development technologies</h2>
+						
+					<div style="margin-top:0.8rem;" class="grid grid-flow-row grid-flow-col auto-cols-max gap-2">
+						<div class="pills html5">HTML5</div>
+						<div class="pills css3">CSS3</div>
+						<div class="pills js">JavaScript</div>
+						<div class="pills php">PHP</div>
+						<div class="pills java">Java</div>
+						<div class="pills ruby">Ruby</div>
+						<div class="pills jquery">jQuery</div>
+						<div class="pills python">Python</div>
+					</div>
+					<div style="margin-top:0.5rem;" class="grid grid-flow-row grid-flow-col auto-cols-max gap-1">
+						<div class="pills pinescript">PineScript</div>
+						<div class="pills sql">SQL/PLSQL</div>
+						<div class="pills react">React JS</div>
+						<div class="pills astrojs">Astro JS</div>
+						<div class="pills angular">Angular JS/Typescript</div>
+					</div>
+
+					<h2 class="pillhead">CSS styling & templating Frameworks</h2>
+						
+					<div style="margin-top:0.8rem;" class="grid grid-flow-row grid-flow-col auto-cols-max gap-2">
+						<div class="pills bootstrap">Bootstrap 5</div>
+						<div class="pills twig">Foundation</div>
+						<div class="pills bootstrap">Pure.css</div>
+						<div class="pills tailwind">Tailwind CSS</div>
+						<div class="pills twig">Twig</div>
+						<div class="pills sass">Sass</div>
+					</div>
+
+					<h2 class="pillhead">CMS & other programs</h2>
+						
+					<div style="margin-top:0.8rem;" class="grid grid-flow-row grid-flow-col auto-cols-max gap-2">
+						<div class="pills drupal">Drupal CMS</div>
+						<div class="pills wordpress">Wordpress CMS</div>
+						<div class="pills joomla">Joomla CMS</div>
+						<div class="pills wordpress">Netlify CMS</div>
+						<div class="pills peoplesoft">Peoplesoft</div>
+						<div class="pills adobe">Adobe CS</div>
+						<div class="pills google">Google Suite</div>
+					</div>
+					<h2 class="pillhead">VPS & Server management</h2>
+						
+					<div style="margin-top:0.8rem;" class="grid grid-flow-row grid-flow-col auto-cols-max gap-2">
+						<div class="pills node">Node.JS/NPM</div>
+						<div class="pills github">Git/Github</div>
+						<div class="pills html5">AWS</div>
+						<div class="pills astrojs">Cloudflare CDN</div>
+						<div class="pills joomla">Linux Server mgt/deployment</div>
+					</div>
+
+					</div>
 				</div>
 			</section>
 		</main>
@@ -59,6 +103,47 @@ import Hero from '../components/Hero.astro';
 </BaseLayout>
 
 <style>
+	.pills {
+		padding: 0.5rem 1rem;
+		gap: 0.5rem;
+		color: var(--accent-text-over);
+		border-radius: 999rem;
+		font-size: var(--text-md);
+		line-height: 1.35;
+		white-space: nowrap;
+	}
+	.pillnav{display: grid;}
+	.pillhead{font-size: var(--text-lg);margin-top:1rem;}
+	.html5{border: 1px solid var(--html5-100);background-color: var(--html5-100);}
+	.css3{border: 1px solid var(--css3-100);background-color: var(--css3-100);}
+	.js{border: 1px solid var(--js-100);background-color: var(--js-100);}
+	.java{border: 1px solid var(--java-100);background-color: var(--java-100);}
+	.php{border: 1px solid var(--php-100);background-color: var(--php-100);}
+	.jquery{border: 1px solid var(--jquery-100);background-color: var(--jquery-100);}
+	.angular{border: 1px solid var(--angular-100);background-color: var(--angular-100);}
+	.node{border: 1px solid var(--node-100);background-color: var(--node-100);}
+	.python{border: 1px solid var(--python-100);background-color: var(--python-100);}
+	.ruby{border: 1px solid var(--ruby-100);background-color: var(--ruby-100);}
+	.react{border: 1px solid var(--react-100);background-color: var(--react-100);}
+	.sql{border: 1px solid var(--sql-100);background-color: var(--sql-100);}
+	.pinescript{border: 1px solid var(--pinescript-100);background-color: var(--pinescript-100);}
+	.tailwind{border: 1px solid var(--tailwind-100);background-color: var(--tailwind-100);}
+	.sass{border: 1px solid var(--sass-100);background-color: var(--sass-100);}
+	.twig{border: 1px solid var(--twig-100);background-color: var(--twig-100);}
+	.bootstrap{border: 1px solid var(--bootstrap-100);background-color: var(--bootstrap-100);}
+	.google{border: 1px solid var(--google-100);background-color: var(--google-100);}
+	.peoplesoft{border: 1px solid var(--peoplesoft-100);background-color: var(--peoplesoft-100);}
+	.github{border: 1px solid var(--github-100);background-color: var(--github-100);}
+	.adobe{border: 1px solid var(--adobe-100);background-color: var(--adobe-100);}
+	.wordpress{border: 1px solid var(--wordpress-100);background-color: var(--wordpress-100);}
+	.drupal{border: 1px solid var(--drupal-100);background-color: var(--drupal-100);}
+	.joomla{border: 1px solid var(--joomla-100);background-color: var(--joomla-100);}
+	.astrojs{border: 1px solid var(--astrojs-100);background-color: var(--astrojs-100);}
+   
+	
+
+
+
 	.about {
 		display: flex;
 		flex-direction: column;

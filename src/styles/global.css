@@ -1,6 +1,36 @@
 /* Global variables */
 :root {
 	/* Colors */
+
+	/* pill colors */
+	--html5-100: #F06529;
+	--css3-100: #2965f1;
+	--python-100:#4584b6;
+	--js-100: #F0DB4F;
+	--java-100:#ED1D25;
+	--ruby-100:#cc0000;
+	--jquery-100:#0769ad;
+	--php-100:#474A8A;
+	--node-100:#3C873A;
+	--react-100:#61DBFB;
+	--angular-100:#a6120d;
+	--sql-100:#00758F;
+	--pinescript-100:#00B453;
+	--tailwind-100:#39A7A6;
+	--sass-100:#cc6699;
+	--twig-100:#86A41B;
+	--bootstrap-100:#6C10ED;
+	--google-100:#4285F4;
+	--peoplesoft-100:#f80000;
+	--github-100:#333333;
+	--adobe-100:#ED2224;
+	--wordpress-100:#21759b;
+	--drupal-100:#0073BA;
+	--joomla-100:#E4B645;
+	--astrojs-100:#FF5D01;
+
+
+/* pill colors end */
 	--gray-0: #090b11;
 	--gray-50: #141925;
 	--gray-100: #283044;
@@ -17,7 +47,7 @@
 	--gray-999: #ffffff;
 
 	--accent-light: #c561f6;
-	--accent-regular: #7611a6;
+	--accent-regular: #4d4699;
 	--accent-dark: #1c0056;
 	--accent-overlay: hsla(280, 89%, 67%, 0.33);
 	--accent-subtle-overlay: var(--accent-overlay);
@@ -56,7 +86,7 @@
 	--text-sm: 0.875rem;
 	--text-base: 1rem;
 	--text-md: 1.125rem;
-	--text-lg: 1.25rem;
+	--text-lg: 1.35rem;
 	--text-xl: 1.625rem;
 	--text-2xl: 2.125rem;
 	--text-3xl: 2.625rem;
@@ -96,7 +126,7 @@
 
 	--link-color: var(--accent-dark);
 
-	--gradient-stop-1: #4c11c6;
+	--gradient-stop-1: #8176FF;
 	--gradient-subtle: linear-gradient(150deg, var(--gray-900) 19%, var(--gray-999) 81%);
 	--gradient-accent-orange: linear-gradient(
 		150deg,
