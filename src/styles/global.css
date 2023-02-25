@@ -1,6 +1,13 @@
 /* Global variables */
 :root {
 	/* Colors */
+	--unaoc-100:#0D9EEC;
+	--bbtg-100:#25243A;
+	--iac-100:#F2E600;
+	--undesa-100:##ffff;
+	--choices-100:#A82D12;
+
+
 
 	/* pill colors */
 	--html5-100: #F06529;

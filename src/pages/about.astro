@@ -13,8 +13,8 @@ import Hero from '../components/Hero.astro';
 				tagline="Read below to learn a little bit more about me."
 			>
 				<img
-					width="1000"
-					height="600"
+					width="800"
+					height="400"
 					src="/assets/at-work.jpg"
 					alt="anthony phillips at work with a colleague"
 				/>
@@ -23,7 +23,6 @@ import Hero from '../components/Hero.astro';
 			<section>
 				<h2 class="section-title">About me</h2>
 				<div class="content">
-					
 					<p>
 						Hello everyone, my name is Anthony Phillips. I was born and raised in Albany NY, the capitol of NY state.
 						I've been living in Queens NYC since about 2016/17 working as a web developer & financial market analyst/trader.
@@ -42,57 +41,51 @@ import Hero from '../components/Hero.astro';
 				<div class="content">
 					<div class="pillnav">
 						<h2 class="pillhead">Programming Languages & other Development technologies</h2>
-						
-					<div style="margin-top:0.8rem;" class="grid grid-flow-row grid-flow-col auto-cols-max gap-2">
-						<div class="pills html5">HTML5</div>
-						<div class="pills css3">CSS3</div>
-						<div class="pills js">JavaScript</div>
-						<div class="pills php">PHP</div>
-						<div class="pills java">Java</div>
-						<div class="pills ruby">Ruby</div>
-						<div class="pills jquery">jQuery</div>
-						<div class="pills python">Python</div>
-					</div>
-					<div style="margin-top:0.5rem;" class="grid grid-flow-row grid-flow-col auto-cols-max gap-1">
-						<div class="pills pinescript">PineScript</div>
-						<div class="pills sql">SQL/PLSQL</div>
-						<div class="pills react">React JS</div>
-						<div class="pills astrojs">Astro JS</div>
-						<div class="pills angular">Angular JS/Typescript</div>
-					</div>
+						<div style="margin-top:0.8rem;" class="grid grid-flow-row grid-flow-col auto-cols-max gap-1">
+							<div class="pills html5">HTML5</div>
+							<div class="pills css3">CSS3</div>
+							<div class="pills js">JavaScript</div>
+							<div class="pills php">PHP</div>
+							<div class="pills java">Java</div>
+							<div class="pills ruby">Ruby</div>
+							<div class="pills jquery">jQuery</div>
+							<div class="pills python">Python</div>
+						</div>
+						<div style="margin-top:0.5rem;" class="grid grid-flow-row grid-flow-col auto-cols-max gap-1">
+							<div class="pills pinescript">PineScript</div>
+							<div class="pills sql">SQL/PLSQL</div>
+							<div class="pills react">React JS</div>
+							<div class="pills astrojs">Astro JS</div>
+							<div class="pills angular">Angular JS/Typescript</div>
+						</div>
 
-					<h2 class="pillhead">CSS styling & templating Frameworks</h2>
-						
-					<div style="margin-top:0.8rem;" class="grid grid-flow-row grid-flow-col auto-cols-max gap-2">
-						<div class="pills bootstrap">Bootstrap 5</div>
-						<div class="pills twig">Foundation</div>
-						<div class="pills bootstrap">Pure.css</div>
-						<div class="pills tailwind">Tailwind CSS</div>
-						<div class="pills twig">Twig</div>
-						<div class="pills sass">Sass</div>
-					</div>
-
-					<h2 class="pillhead">CMS & other programs</h2>
-						
-					<div style="margin-top:0.8rem;" class="grid grid-flow-row grid-flow-col auto-cols-max gap-2">
-						<div class="pills drupal">Drupal CMS</div>
-						<div class="pills wordpress">Wordpress CMS</div>
-						<div class="pills joomla">Joomla CMS</div>
-						<div class="pills wordpress">Netlify CMS</div>
-						<div class="pills peoplesoft">Peoplesoft</div>
-						<div class="pills adobe">Adobe CS</div>
-						<div class="pills google">Google Suite</div>
-					</div>
-					<h2 class="pillhead">VPS & Server management</h2>
-						
-					<div style="margin-top:0.8rem;" class="grid grid-flow-row grid-flow-col auto-cols-max gap-2">
-						<div class="pills node">Node.JS/NPM</div>
-						<div class="pills github">Git/Github</div>
-						<div class="pills html5">AWS</div>
-						<div class="pills astrojs">Cloudflare CDN</div>
-						<div class="pills joomla">Linux Server mgt/deployment</div>
-					</div>
-
+						<h2 class="pillhead">CSS styling & templating Frameworks</h2>
+						<div style="margin-top:0.8rem;" class="grid grid-flow-row grid-flow-col auto-cols-max gap-1">
+							<div class="pills bootstrap">Bootstrap 5</div>
+							<div class="pills twig">Foundation</div>
+							<div class="pills bootstrap">Pure.css</div>
+							<div class="pills tailwind">Tailwind CSS</div>
+							<div class="pills twig">Twig</div>
+							<div class="pills sass">Sass</div>
+						</div>
+						<h2 class="pillhead">CMS & other programs</h2>
+						<div style="margin-top:0.8rem;" class="grid grid-flow-row grid-flow-col auto-cols-max gap-1">
+							<div class="pills drupal">Drupal</div>
+							<div class="pills wordpress">Wordpress</div>
+							<div class="pills joomla">Joomla!</div>
+							<div class="pills wordpress">Netlify</div>
+							<div class="pills peoplesoft">Peoplesoft</div>
+							<div class="pills adobe">Adobe CS</div>
+							<div class="pills google">Google Suite</div>
+						</div>
+						<h2 class="pillhead">VPS & Server management</h2>
+						<div style="margin-top:0.8rem;" class="grid grid-flow-row grid-flow-col auto-cols-max gap-1">
+							<div class="pills node">Node.JS/NPM</div>
+							<div class="pills github">Git/Github</div>
+							<div class="pills html5">AWS</div>
+							<div class="pills astrojs">Cloudflare CDN</div>
+							<div class="pills joomla">Linux Server mgt/deployment</div>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -103,15 +96,7 @@ import Hero from '../components/Hero.astro';
 </BaseLayout>
 
 <style>
-	.pills {
-		padding: 0.5rem 1rem;
-		gap: 0.5rem;
-		color: var(--accent-text-over);
-		border-radius: 999rem;
-		font-size: var(--text-md);
-		line-height: 1.35;
-		white-space: nowrap;
-	}
+	.pills {padding: 0.5rem 1rem;gap: 0.5rem;color: var(--accent-text-over);border-radius: 999rem;font-size: var(--text-md);line-height: 1.35;white-space: nowrap;}
 	.pillnav{display: grid;}
 	.pillhead{font-size: var(--text-lg);margin-top:1rem;}
 	.html5{border: 1px solid var(--html5-100);background-color: var(--html5-100);}
@@ -139,11 +124,6 @@ import Hero from '../components/Hero.astro';
 	.drupal{border: 1px solid var(--drupal-100);background-color: var(--drupal-100);}
 	.joomla{border: 1px solid var(--joomla-100);background-color: var(--joomla-100);}
 	.astrojs{border: 1px solid var(--astrojs-100);background-color: var(--astrojs-100);}
-   
-	
-
-
-
 	.about {
 		display: flex;
 		flex-direction: column;

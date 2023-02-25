@@ -87,17 +87,29 @@ const projects = (await getCollection('work'))
 						a look below to learn more.
 					</p>
 				</header>
-
-		
 				<div class="gallery">
 					<Grid variant="small">
-						{
-							['United Nations', 'UNAOC', 'UNDESA', 'Bearish Bulls Trading Group', 'NY OSC','Choices Counseling','The Pottery Place'].map((brand) => (
-								<li class="mention-card">
-									<p>{brand}</p>
-								</li>
-							))
-						}
+						<li class="mention-card unaoc">
+							<a href href="https://www.unaoc.org/"><img src="/public/assets/unaoclogo.png"></a>
+						</li>
+						<li class="mention-card bbtg">
+							<a href href="https://bearishbulls.tempurl.host/"><img src="/public/assets/bblogo.webp"></a>
+						</li>
+						<li class="mention-card iac">
+							<a href href="https://www.iac.com/brands/ask-applications"><img src="/public/assets/iaclogo.svg"></a>
+						</li>
+						<li class="mention-card undesa">
+							<a href href="https://www.un.org/en/desa"><img src="/public/assets/undesa.png"></a>
+						</li>
+						<li class="mention-card choices">
+							<a href href="https://choicesconsulting.com/"><img src="/public/assets/choiceslogo.webp"></a>
+						</li>
+						<li class="mention-card newschool">
+							<a href href="https://www.un.org/en/desa"><img src="/public/assets/undesa.png"></a>
+						</li>
+						<li class="mention-card undesa">
+							<a href href="https://www.un.org/en/desa"><img src="/public/assets/undesa.png"></a>
+						</li>
 					</Grid>
 				</div>
 			</section>
@@ -126,7 +138,6 @@ const projects = (await getCollection('work'))
 	.hero img {
 		aspect-ratio: 5 / 4;
 		object-fit: cover;
-		object-position: top;
 		border-radius: 1.5rem;
 		box-shadow: var(--shadow-md);
 	}
@@ -225,6 +236,7 @@ const projects = (await getCollection('work'))
 		.gallery {
 			grid-area: gallery;
 		}
+		
 
 		.cta {
 			grid-area: cta;
@@ -236,16 +248,22 @@ const projects = (await getCollection('work'))
 
 	.mention-card {
 		display: flex;
+		padding:0.5rem;
 		height: 7rem;
 		justify-content: center;
 		align-items: center;
 		text-align: center;
-		border: 1px solid var(--gray-800);
+		border: 1px inset var(--gray-800);
 		border-radius: 1.5rem;
 		color: var(--gray-300);
-		background: var(--gradient-subtle);
+		background-color:#11131d;
 		box-shadow: var(--shadow-sm);
 	}
+	.unaoc:hover{background-color: var(--unaoc-100);}
+	.bbtg:hover{background-color: var(--bbtg-100);}
+	.iac:hover{background-color: var(--iac-100);}
+	.undesa:hover{background-color: var(--undesa-100);}
+	.choices:hover{background-color: var(--choices-100);}
 
 	@media (min-width: 50em) {
 		.mention-card {
