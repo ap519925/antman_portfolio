@@ -1,6 +1,6 @@
 ---
 title: UNAOC App and Website
-publishDate: 2019-12-01 00:00:00
+publishDate: 2022-12-01 00:00:00
 img: /assets/unaocapp.webp
 img_alt: UNAOC App Screenshot
 description: |
@@ -11,7 +11,7 @@ tags:
   - Backend
 ---
 
-##### <div><a class="highlight highlight-unaoc" href="https://8thglobalforum.unaoc.org/">UNAOC Global Forum Website</a></div>
+##### <div><center><a class="highlight highlight-unaoc" href="https://8thglobalforum.unaoc.org/">UNAOC Global Forum Website</a></center></div>
 #### Project Overview
 I was hired on as a Web Development & Design Consultant in order to develop/design a WordPress website + native mobile application for UNAOC's 8th global forum, it was a great experience that I really enjoyed.
 
