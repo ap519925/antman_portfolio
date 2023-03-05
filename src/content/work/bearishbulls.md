@@ -8,7 +8,7 @@ description: |
 tags:
   - Design
   - Branding
-  - Developement
+  - Development
   - Marketing
   - Financial market analysis & trading
   - PHP

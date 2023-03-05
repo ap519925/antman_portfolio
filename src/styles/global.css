@@ -9,7 +9,7 @@
 	--sunyalbany-100:#46166b;
 	--unbank-100:#0F4262;
 	--potteryplace-100:#F2E4FC;
-
+	--myengname-100:#FB5353;
 
 	/* pill colors */
 	--html5-100: #F06529;
@@ -111,6 +111,42 @@
 	/* Transitions */
 	--theme-transition: 0.5s ease-in-out;
 }
+.highlight-eng{
+	background-color:var(--myengname-100);
+	padding:1rem;
+	border-radius:1rem;
+	-webkit-border-radius:1rem ;
+	-moz-border-radius:1rem ;
+	-ms-border-radius:1rem ;
+	-o-border-radius:1rem ;
+	transition: all .5s ease;
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+	-o-transition: all .5s ease;
+}
+.highlight-unaoc{
+	background-color:var(--unaoc-100);
+	padding:1rem;
+	border-radius:1rem;
+	-webkit-border-radius:1rem ;
+	-moz-border-radius:1rem ;
+	-ms-border-radius:1rem ;
+	-o-border-radius:1rem ;
+	transition: all .5s ease;
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+	-o-transition: all .5s ease;
+}
+
+.highlight:hover{
+	background-color:var(--accent-regular);
+	transition: all .5s ease;
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+	-o-transition: all .5s ease;}
 
 :root.theme-dark {
 	--gray-0: #ffffff;
@@ -291,3 +327,15 @@ h5 {
 		gap: 12rem;
 	}
 }
+
+/* Lightbox CSS */
+.lightbox-display-topright{position:absolute;right:0;top:0; padding:1rem;}
+.lightbox-hover-red:hover{color:#fff!important;background-color:#f44336!important}
+.lightbox-xlarge{font-size:24px!important}.lightbox-xxlarge{font-size:36px!important}.lightbox-xxxlarge{font-size:48px!important}.lightbox-jumbo{font-size:64px!important}
+.lightbox-display-topright{position:absolute;right:0;top:0}
+.lightbox-modal-content{margin:0 10px;}.lightbox-modal{padding-top:30px} 
+@media (max-width:768px){.lightbox-modal-content{width:500px}.lightbox-modal{padding-top:50px}}
+@media (min-width:993px){.lightbox-modal-content{width:900px}.lightbox-hide-large{display:none!important}.lightbox-sidebar.lightbox-collapse{display:block!important}}
+.lightbox-modal-content{margin:auto;background-color:#fff;position:relative;padding:0;outline:0;width:600px}
+.lightbox-animate-zoom {animation:animatezoom 0.6s}@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}
+.lightbox-modal{z-index:3;display:none;padding-top:100px;position:fixed;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgb(0,0,0);background-color:rgba(0,0,0,0.4)}
