@@ -139,6 +139,7 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 
 	.menu-button {
 		position: relative;
+		transition: all 0.3s linear;
 		display: flex;
 		border: 0;
 		border-radius: 999rem;
@@ -151,6 +152,7 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 
 	.menu-button[aria-expanded='true'] {
 		color: var(--gray-0);
+		transition: all 0.3s linear;
 		background: linear-gradient(180deg, var(--gray-600), transparent),
 		radial-gradient(var(--gray-900), var(--gray-800) 150%);
 	}
@@ -162,6 +164,7 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 	.menu-button::before {
 		position: absolute;
 		inset: -1px;
+		transition: all 0.3s linear;
 		content: '';
 		background: var(--gradient-stroke);
 		border-radius: 999rem;
@@ -183,8 +186,6 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 		line-height: 1.2;
 		list-style: none;
 		padding: 2rem;
-		background-color: var(--gray-999);
-		border-bottom: 1px solid var(--gray-800);
 	}
 
 	.link {
@@ -200,7 +201,6 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 	.menu-footer {
 		--icon-size: var(--text-xl);
 		--icon-padding: 0.5rem;
-
 		display: flex;
 		justify-content: space-between;
 		gap: 0.75rem;
@@ -262,25 +262,23 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 			position: relative;
 			flex-direction: row;
 			font-size: var(--text-sm);
-			border-radius: 999rem;
+			border-radius: 3rem;
 			border: 0;
 			padding: 0.5rem 0.5625rem;
-			background: radial-gradient(var(--gray-900), var(--gray-800) 150%);
-			box-shadow: var(--shadow-md);
+			background: rgba(0,0,0,0.5);
 		}
 
 		.nav-items::before {
 			position: absolute;
 			inset: -1px;
 			content: '';
-			background: var(--gradient-stroke);
-			border-radius: 999rem;
+			border-radius: 3rem;
 			z-index: -1;
 		}
 
 		.link {
 			padding: 0.5rem 1rem;
-			border-radius: 999rem;
+			border-radius: 3rem;
 			transition: color var(--theme-transition), background-color var(--theme-transition);
 		}
 
@@ -323,3 +321,6 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 		}
 	}
 </style>
+
+
+
