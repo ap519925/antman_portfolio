@@ -24,8 +24,7 @@ const projects = (await getCollection('work'))
 ---
 
 <BaseLayout>
-	<div class="stack gap-20 lg:gap-48">
-		<div class="wrapper stack gap-8 lg:gap-20">
+	<div class="wrapper stack gap-8 lg:gap-20">
 			<header class="hero">
 				<Hero 
 					title="Hello, my name is Anthony Phillips" 
@@ -49,7 +48,6 @@ const projects = (await getCollection('work'))
 
 			<Skills />
 		</div>
-
 		<main class="wrapper stack gap-20 lg:gap-48">
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
@@ -130,13 +128,11 @@ const projects = (await getCollection('work'))
 				</div>
 			</section>
 		</main>
-
 		<ContactCTA />
 	</div>
 </BaseLayout>
 
 <style>
-
 .html5pill{
 	   background-color: var(--html5-100)!important;
 	}
