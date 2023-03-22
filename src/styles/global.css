@@ -327,7 +327,10 @@ h5 {
 	}
 }
 
+
 /* Lightbox CSS */
+
+
 .lightbox-display-topright{position:absolute;right:0;top:0; padding:1rem;}
 .lightbox-hover-red:hover{color:#fff!important;background-color:#f44336!important}
 .lightbox-xlarge{font-size:24px!important}.lightbox-xxlarge{font-size:36px!important}.lightbox-xxxlarge{font-size:48px!important}.lightbox-jumbo{font-size:64px!important}
