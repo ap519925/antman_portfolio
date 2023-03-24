@@ -41,16 +41,3 @@ I designed and developed a web app that uses JS and PHP to take user information
 </div>
 
 
-<div id="modal01" class="lightbox-modal" onclick="this.style.display='none'">
-  <span class="lightbox-button lightbox-hover-red lightbox-xlarge lightbox-display-topright">&times;</span>
-  <div class="lightbox-modal-content lightbox-animate-zoom wide-modal">
-    <img id="img01" style="width:100%">
-  </div>
-</div>
-
-<script>
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-}
-</script>
