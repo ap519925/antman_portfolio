@@ -9,12 +9,6 @@ tags:
   - Dev
   - Design
   - PHP
-  - WordPress
-  - JS
-  - CSS3
-  - HTML5
-  - TWIG
-
 ---
 
 ##### <div><a class="highlight highlight-unaoc" href="https://choicesconsulting.com/">Choices Counseling & Consulting Website</a></div>

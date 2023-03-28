@@ -9,8 +9,6 @@ tags:
   - Design
   - Dev
   - WordPress
-  - Pottery
-  - Family Business
 ---
 ##### <div><center><a class="highlight-pp highlight" href="http://www.thepotteryplace.com">The Pottery Place</a></center></div>
 #### Project Overview

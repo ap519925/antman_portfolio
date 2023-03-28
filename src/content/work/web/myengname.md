@@ -9,8 +9,6 @@ tags:
   - Design
   - Dev
   - Language
-  - PHP
-  - MySQL
 ---
 ##### <div><center><a class="highlight-eng highlight" href="http://www.bearishbulls.net"> MyEngName.com</a></center></div>
 #### Project Overview

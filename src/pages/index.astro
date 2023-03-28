@@ -174,7 +174,6 @@ const projects = (await getCollection('work'))
 			object-fit: cover;
 		}
 	}
-
 	/* ====================================================== */
 
 	.section {
@@ -270,7 +269,7 @@ const projects = (await getCollection('work'))
 		background: rgba(0,0,0,0.5);
 		box-shadow: var(--shadow-sm);
 	}
-	.mention-card:hover{filter: brightness(115%);}
+	.mention-card:hover{filter: brightness(115%);transition: all .25s ease-in-out;}
 	.sfs:hover{background-color: var(--sfs-100);}
 	.osc:hover{background-color: var(--osc-100);}
 	.unaoc:hover{background-color: var(--unaoc-100);}
