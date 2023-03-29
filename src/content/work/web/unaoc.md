@@ -21,9 +21,7 @@ I was hired on as a Web Development & Design Consultant in order to develop/desi
  - Used the Adobe Creative Suite to design 8th Global Forum promo material for both print and digital usage
 
 
-
-<script type="module" src="/public/scripts/fslightbox.js"></script>
-
+<script type="module" src="../../../scripts/fslightbox.js"></script>
 <div class="container mx-auto space-y-2 lg:space-y-0 lg:gap-2 lg:grid lg:grid-cols-3">
   <div class="w-full rounded hover:opacity-50">
     <a data-fslightbox href="https://i.imgur.com/bZSuSH3.png"><img src="/assets/app_screens/unaocapp1.webp" alt="myengname modal lightbox image1"></a>

@@ -21,7 +21,7 @@ I designed and developed a PWA that serves as a social platform for the bearish 
 
 - Developed and designed PWA based on WordPress CMS pulling in financial market data from various sources
 
-<script type="module" src="/public/scripts/fslightbox.js"></script>
+<script type="module" src="../../../scripts/fslightbox.js"></script>
 
 <div class="container mx-auto space-y- lg:space-y-0 lg:gap-3 lg:grid lg:grid-cols-4">
   <div class="w-full rounded hover:opacity-50">
