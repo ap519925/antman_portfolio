@@ -18,9 +18,6 @@ I designed and developed a web app that uses JS and PHP to take user information
  - Used CSS3 & HTML5 to design this web app
  - used PHP/JS to create form that takes user info and returns an english name based on what they hav entered
 
-
-
-
 <script type="module" src="/public/scripts/fslightbox.js"></script>
 
 <div class="container mx-auto space-y-2 lg:space-y-0 lg:gap-3 lg:grid lg:grid-cols-2">
