@@ -23,7 +23,7 @@ I designed and developed a PWA that serves as a social platform for the bearish 
 
 <script type="module" src="../../../scripts/fslightbox.js"></script>
 
-<div class="container mx-auto space-y- lg:space-y-0 lg:gap-3 lg:grid lg:grid-cols-4">
+<div class="container mx-auto space-y- lg:space-y-0 lg:gap-3 lg:grid lg:grid-cols-3">
   <div class="w-full rounded hover:opacity-50">
       <a data-fslightbox href="https://i.imgur.com/5EwUvvZ.png"><img src="/assets/app_screens/bbapp1.png" alt="myengname modal lightbox image1"></a>
   </div>

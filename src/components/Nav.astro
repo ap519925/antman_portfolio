@@ -14,9 +14,6 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 	{ label: 'Twitter', href: 'https://twitter.com/bearish_bulls', icon: 'twitter-logo' },
 	{ label: 'Twitch', href: 'https://www.twitch.tv/antman2022', icon: 'twitch-logo' },
 	{ label: 'GitHub', href: 'https://github.com/phillias2233', icon: 'github-logo' },
-	{ label: 'Facebook', href: 'https://www.facebook.com/BearishBullsTrading/', icon: 'instagram-logo' },
-	{ label: 'TradingView', href: 'https://www.tradingview.com/u/Bearish-Bulls/', icon: 'codepen-logo' },
-	{ label: 'stocktwits', href: 'https://stocktwits.com/BearishBulls_', icon: 'dribbble-logo' },
 	{ label: 'YouTube', href: 'https://www.youtube.com/@jpowbrrrrrr', icon: 'youtube-logo' },
 ];
 ---
@@ -215,7 +212,10 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 		flex-wrap: wrap;
 		gap: 0.625rem;
 		font-size: var(--icon-size);
+		transition: all 0.2s ease-in-out;
 	}
+
+	.socials a:hover{transform: scale(1.5);transition: all 0.2s ease-in-out;}
 
 	.social {
 		display: flex;
