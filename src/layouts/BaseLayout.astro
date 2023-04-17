@@ -20,13 +20,20 @@ const { title, description } = Astro.props;
 	import SwupScriptsPlugin from '@swup/scripts-plugin';
 	import SwupA11yPlugin from '@swup/a11y-plugin'
 	import SwupHeadPlugin from '@swup/head-plugin'
-	import SwupSlideTheme   from '@swup/slide-theme'
+	import SwupOverlayTheme from '@swup/overlay-theme';
 	import SwupPreloadPlugin from '@swup/preload-plugin';
 	import SwupBodyClassPlugin from '@swup/body-class-plugin';
 	import SwupDebugPlugin from '@swup/debug-plugin';
 	const swup = new Swup({
-		plugins: [new SwupScriptsPlugin(), new SwupA11yPlugin(), new SwupHeadPlugin(), new SwupSlideTheme(), new SwupPreloadPlugin(), new SwupBodyClassPlugin(), new SwupDebugPlugin()],
+		plugins: [new SwupScriptsPlugin(), new SwupA11yPlugin(), new SwupHeadPlugin(), 
+		new SwupOverlayTheme({
+    		color: '#f6ff76',
+    		duration: 800,
+    		direction: 'to-bottom',}), new SwupPreloadPlugin(), new SwupBodyClassPlugin(), new SwupDebugPlugin()],
 	});
+
+
+
 </script>
 
 <html lang="en">
@@ -48,7 +55,7 @@ const { title, description } = Astro.props;
 <style>
 	:root 
 		{
-		--_placeholder-bg: linear-gradient(transparent, transparent);
+		--placeholder-bg: linear-gradient(transparent, transparent);
 		--bg-image-main: url('/assets/backgrounds/bg-main-light-800w.jpg');
 		--bg-image-main-curves: url('/assets/backgrounds/bg-main-light.svg');
 		--bg-image-subtle-1: var(--_placeholder-bg);
@@ -57,9 +64,9 @@ const { title, description } = Astro.props;
 		--bg-svg-blend-mode: overlay;
 		--bg-blend-mode: darken;
 		--bg-image-aspect-ratio: 2.25;
-		--bg-scale: 6;
+		--bg-scale: 1;
 		--bg-aspect-ratio: calc(var(--bg-image-aspect-ratio) / var(--bg-scale));
-		--bg-gradient-size: calc(var(--bg-scale) * 100%);
+		--bg-gradient-size: calc(var(--bg-scale) * 150%);
 		}
 
 	:root.theme-dark 
@@ -68,6 +75,7 @@ const { title, description } = Astro.props;
 		--bg-image-main-curves: url('/assets/backgrounds/bg-main-dark.svg');
 		--bg-svg-blend-mode: darken;
 		--bg-blend-mode: lighten;
+		--bg-scale: 2;
 		}
 
 /* These backgrounds are displayed below the fold, so we lazy load them
