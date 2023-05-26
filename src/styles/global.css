@@ -122,11 +122,17 @@
 .highlight-bb{
 	background-color:var(--bbtg-100);
 }
+.highlight-ub{
+	background-color:#0F4262;
+}
 .highlight-pp{
 	background-color:#936FB2;
 }
+.highlight-dp{
+	background-color:#0678BE;
+}
 .highlight{
-	padding:1rem;
+	padding:1.5rem;
 	margin-bottom:1rem;
 	border-radius:1rem;
 	-webkit-border-radius:1rem ;

@@ -12,6 +12,12 @@ tags:
 ---
 
 ##### <div><center><a class="highlight highlight-unaoc" href="https://8thglobalforum.unaoc.org/">UNAOC Global Forum Website</a></center></div>
+<br>
+
+##### <div><center><a class="highlight highlight-unaoc" href="Astro_Portfolio_Dev/antman_portfolio/public/assets/downloads/UNAOC_1.0.apk" download>UNAOC Global Forum Website App APK Download</a></center></div>
+
+<br>
+
 #### Project Overview
 I was hired on as a Web Development & Design Consultant in order to develop/design a WordPress website + native mobile application for UNAOC's 8th global forum, it was a great experience that I really enjoyed.
 
@@ -22,7 +28,8 @@ I was hired on as a Web Development & Design Consultant in order to develop/desi
 
 
 
-### <center>App Screens</center>
+## <center>App Screens</center>
+
 <script type="module" src="../../../scripts/fslightbox.js"></script>
 <div class="container mx-auto space-y-2 lg:space-y-0 lg:gap-2 lg:grid lg:grid-cols-3">
   <div class="w-full rounded hover:opacity-50">
@@ -52,7 +59,7 @@ I was hired on as a Web Development & Design Consultant in order to develop/desi
 </div>
 
 
-### <center>Web Screens</center>
+## <center>Web Screens</center>
 
 <div class="container mx-auto space-y-2 lg:space-y-0 lg:gap-2 lg:grid lg:grid-cols-2">
   <div class="w-full rounded hover:opacity-50">
@@ -75,6 +82,32 @@ I was hired on as a Web Development & Design Consultant in order to develop/desi
   </div>
    <div class="w-full rounded hover:opacity-50">
     <a data-fslightbox href="https://i.imgur.com/ZfkeGyk.png"><img src="/assets/portfolio/unaocweb8.png" alt="UNAOC modal lightbox image8"></a>
+  </div>
+</div>
+
+
+### <center>Print & Digital</center>
+<div class="container mx-auto space-y-2 lg:space-y-0 lg:gap-2 lg:grid lg:grid-cols-2">
+  <div class="w-full rounded hover:opacity-50">
+    <a data-fslightbox href="https://i.imgur.com/d8BCleq.png"><img src="/assets/portfolio/unaocdes1.png" alt="UNAOC modal lightbox image8"></a>
+  </div>
+  <div class="w-full rounded hover:opacity-50">
+    <a data-fslightbox href="https://i.imgur.com/ej02rFA.png"><img src="/assets/portfolio/unaocdes3.png" alt="UNAOC modal lightbox image8"></a>
+  </div>
+  <div class="w-full rounded hover:opacity-50">
+    <a data-fslightbox href="https://i.imgur.com/0zGqbp5.png"><img src="/assets/portfolio/unaocdes5.png" alt="UNAOC modal lightbox image8"></a>
+  </div>
+  <div class="w-full rounded hover:opacity-50">
+    <a data-fslightbox href="https://i.imgur.com/PeVOPOf.png"><img src="/assets/portfolio/unaocdes7.png" alt="UNAOC modal lightbox image8"></a>
+  </div>
+  <div class="w-full rounded hover:opacity-50">
+    <a data-fslightbox href="https://i.imgur.com/Yv2spSd.png"><img src="/assets/portfolio/unaocdes8.png" alt="UNAOC modal lightbox image8"></a>
+  </div>
+  <div class="w-full rounded hover:opacity-50">
+    <a data-fslightbox href="https://i.imgur.com/twzkJzE.png"><img src="/assets/portfolio/unaocdes9.png" alt="UNAOC modal lightbox image8"></a>
+  </div>
+   <div class="w-full rounded hover:opacity-50">
+    <a data-fslightbox href="https://i.imgur.com/SmMbAbQ.png"><img src="/assets/portfolio/unaocdes10.png" alt="UNAOC modal lightbox image8"></a>
   </div>
 </div>
 
