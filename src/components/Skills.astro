@@ -3,17 +3,17 @@ import Icon from './Icon.astro';
 ---
 
 <section class="box skills">
-	<div class="stack gap-2 lg:gap-4">
+	<div class="stack gap-2 lg:gap-4 skill-item" style="animation-delay: 0s;">
 		<Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
 		<h2>Fullstack Development</h2>
 		<p>From front-end development & design to server deployment I am confident in my abilities to successfully take on large scale development projects.</p>
 	</div>
-	<div class="stack gap-2 lg:gap-4">
+	<div class="stack gap-2 lg:gap-4 skill-item" style="animation-delay: 0.2s;">
 		<Icon icon="trophy" color="var(--accent-regular)" size="2.5rem" gradient />
 		<h2>QA Testing, End-User Training, & Documentation</h2>
 		<p>Over the past 10 years I've had to develop end-user training materials and conduct walkthroughs translating technical jargon into easily understandable end-user documentation.</p>
 	</div>
-	<div class="stack gap-2 lg:gap-4">
+	<div class="stack gap-2 lg:gap-4 skill-item" style="animation-delay: 0.4s;">
 		<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
 		<h2>Financial data & technical analysis</h2>
 		<p>I have many years of experience successfully navigating tumultuous financial markets by using data/technical analysis and many differrent strategies</p>
@@ -57,6 +57,23 @@ import Icon from './Icon.astro';
 
 		.skills h2 {
 			font-size: var(--text-2xl);
+		}
+	}
+
+	.skill-item {
+		opacity: 0;
+		transform: translateY(20px);
+		animation: fadeInUp 0.8s ease-out forwards;
+	}
+
+	@keyframes fadeInUp {
+		from {
+			opacity: 0;
+			transform: translateY(20px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
 		}
 	}
 </style>

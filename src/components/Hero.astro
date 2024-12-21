@@ -20,17 +20,53 @@ const { align = 'center', tagline, title } = Astro.props;
 	.hero {
 		font-size: var(--text-lg);
 		text-align: center;
+		opacity: 0;
+		transform: translateY(20px);
+		animation: fadeInUp 0.8s ease-out forwards;
+	}
+
+	@keyframes fadeInUp {
+		from {
+			opacity: 0;
+			transform: translateY(20px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
 	}
 
 	.title,
 	.tagline {
 		max-width: 37ch;
 		margin-inline: auto;
+		transition: all 0.3s ease;
 	}
 
 	.title {
 		font-size: var(--text-3xl);
 		color: var(--gray-0);
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+		position: relative;
+	}
+
+	.title:hover {
+		transform: scale(1.02);
+		text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+	}
+
+	.tagline {
+		opacity: 0;
+		animation: fadeIn 0.8s ease-out 0.4s forwards;
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
 	}
 
 	@media (min-width: 50em) {
