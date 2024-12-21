@@ -17,6 +17,8 @@
     "@astrojs/svelte": "^5.7.3",
     "@astrojs/tailwind": "^5.1.2",
     "@julian_cataldo/astro-lightbox": "^0.10.11",
+    "@sentry/astro": "^8.47.0",
+    "@spotlightjs/astro": "^2.3.0",
     "@swup/a11y-plugin": "^3.0.0",
     "@swup/body-class-plugin": "^2.0.1",
     "@swup/debug-plugin": "^3.0.0",
