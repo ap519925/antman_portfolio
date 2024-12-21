@@ -27,7 +27,10 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 			<template>
 				<button class="menu-button" aria-expanded="false">
 					<span class="sr-only">Menu</span>
-					<Icon icon="list" />
+					<div class="icon-wrapper">
+						<span class="menu-icon"><Icon icon="list" /></span>
+						<span class="close-icon"><Icon icon="arrow-right" /></span>
+					</div>
 				</button>
 			</template>
 		</menu-button>
@@ -143,11 +146,39 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 		transition: all 0.3s ease;
 	}
 
+	.icon-wrapper {
+		position: relative;
+		width: 1.5rem;
+		height: 1.5rem;
+	}
+
+	.menu-icon,
+	.close-icon {
+		position: absolute;
+		top: 0;
+		left: 0;
+		transition: opacity 0.3s ease, transform 0.3s ease;
+	}
+
+	.close-icon {
+		opacity: 0;
+		transform: rotate(90deg) scale(0);
+	}
+
+	.menu-button[aria-expanded='true'] .menu-icon {
+		opacity: 0;
+		transform: scale(0);
+	}
+
+	.menu-button[aria-expanded='true'] .close-icon {
+		opacity: 1;
+		transform: rotate(90deg) scale(1);
+	}
+
 	.menu-button[aria-expanded='true'] {
 		color: var(--gray-0);
 		background: linear-gradient(180deg, var(--gray-600), transparent),
 			radial-gradient(var(--gray-900), var(--gray-800) 150%);
-		transform: rotate(90deg);
 	}
 
 	#menu-content {
@@ -244,12 +275,12 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 			padding: 0;
 		}
 
-		.menu-button {
-			display: none;
-		}
-
 		.site-title {
 			font-size: var(--text-lg);
+		}
+
+		.menu-button {
+			display: none;
 		}
 
 		#menu-content {
