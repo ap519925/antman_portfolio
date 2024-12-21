@@ -29,7 +29,7 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 					<span class="sr-only">Menu</span>
 					<div class="icon-wrapper">
 						<span class="menu-icon"><Icon icon="list" /></span>
-						<span class="close-icon"><Icon icon="arrow-right" /></span>
+						<span class="close-icon"><Icon icon="close" /></span>
 					</div>
 				</button>
 			</template>
@@ -162,7 +162,7 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 
 	.close-icon {
 		opacity: 0;
-		transform: rotate(90deg) scale(0);
+		transform: scale(0);
 	}
 
 	.menu-button[aria-expanded='true'] .menu-icon {
@@ -172,7 +172,7 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 
 	.menu-button[aria-expanded='true'] .close-icon {
 		opacity: 1;
-		transform: rotate(90deg) scale(1);
+		transform: scale(1);
 	}
 
 	.menu-button[aria-expanded='true'] {
