@@ -1,5 +1,4 @@
 ---
-import type { HTMLAttributes } from 'astro/types';
 import { iconPaths } from './IconPaths';
 
 export interface Props {
@@ -12,7 +11,7 @@ export interface Props {
 const { color = 'currentcolor', gradient, icon, size } = Astro.props;
 const iconPath = iconPaths[icon];
 
-const attrs: HTMLAttributes<'svg'> = {};
+const attrs: { style?: { [key: string]: string } } = {};
 if (size) attrs.style = { '--size': size };
 
 const gradientId = 'icon-gradient-' + Math.round(Math.random() * 10e12).toString(36);
