@@ -12,7 +12,7 @@ tags:
   - Dev
 ---
 
-##### <div><center><a class="highlight highlight-bb content-center" href="http://www.intrepidmuseum.org">Intrepid Museum Drupal Website</a></center></div>
+##### <div><center><a class="highlight highlight-bb content-center" href="http://www.intrepidmuseum.org">Intrepid Website</a></center></div>
 
 #### Project Overview
 

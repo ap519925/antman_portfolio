@@ -11,10 +11,10 @@ tags:
   - Backend
 ---
 
-##### <div><center><a class="highlight highlight-unaoc" href="https://8thglobalforum.unaoc.org/">UNAOC Global Forum Website</a></center></div>
+##### <div><center><a class="highlight highlight-unaoc" href="https://8thglobalforum.unaoc.org/">8th Forum Website</a></center></div>
 <br>
 
-##### <div><center><a class="highlight highlight-unaoc" href="Astro_Portfolio_Dev/antman_portfolio/public/assets/downloads/UNAOC_1.0.apk" download>UNAOC Global Forum Website App APK Download</a></center></div>
+##### <div><center><a class="highlight highlight-unaoc" href="Astro_Portfolio_Dev/antman_portfolio/public/assets/downloads/UNAOC_1.0.apk" download>UNAOC App APK Download</a></center></div>
 
 <br>
 
