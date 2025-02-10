@@ -11,6 +11,13 @@ tags:
   - PHP
 ---
 
+<style>
+ul{
+    text-decoration:;
+    list-style-type: circle!important;
+}
+</style>
+
 ##### <div><a class="highlight highlight-unaoc" href="https://choicesconsulting.com/">Choices Counseling & Consulting Website</a></div>
 #### Project Overview
 I was hired in order to clean up their current website, while also starting to work on designing them a new website. Currently updating content on their WP instance is cumbersome due to the original websites development, so i have been making content updates for them on an as needed basis.

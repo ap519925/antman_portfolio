@@ -9,16 +9,32 @@ tags:
   - Full-stack development
   - Dev
 ---
+<style>
+ul{
+    text-decoration:;
+    list-style-type: circle!important;
+}
+</style>
+
 
 ##### <div><center><a class="highlight highlight-bb content-center" href="http://www.massport.com">Massport Website</a></center></div>
 
 #### Project Overview
 
-  I am currently working as a Drupal Consultant/Full-Stack Developer at Jacobs Solutions, I work closely with our client Massport, where I am responsible for maintaining and developing new features for their web properties and mobile applications. My work has led to more efficient code, a significant reduction in unnecessary page visits, and optimized API requests.
+ - Spearheaded development efforts for multiple Drupal 10 web properties , leveraging tools like Lando , Acquia Cloud , and GitHub to implement code changes in PHP, CSS, JS, and React.
+ - Designed and implemented a bug/feature request ticketing system using GitHub Issues and templates, streamlining workflows and enabling seamless communication with stakeholders.
+ - Rewrote React-based flight tracker application, introducing complex logic to display dynamic banners based on real-time flight statuses (e.g., arriving early, delayed, canceled).
+ - Optimized site performance by integrating Datadog, Imperva, and Google Analytics, reducing unnecessary API requests by 60% and significantly lowering operational costs.
+ - Automated deployment workflows across local, dev, staging, and production environments using GitHub Actions and Acquia Cloud .
+ 
 
 ##### Project Scope:
 
-- Support & develop new features for Massports new Drupal 10 website as well as various React web applications that also live on the websit.
+ - Support & develop new features for Massports new Drupal 10 website as well as various React web applications that also live on the website.
+
+##### Key Technologies:
+
+ - Drupal 10, React.js, SASS, Webpack, Gulp, Acquia Cloud, Datadog, Google Analytics, Patternlab
 
 <script type="module" src="../../../scripts/fslightbox.js"></script>
 

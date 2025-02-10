@@ -10,6 +10,13 @@ tags:
   - Dev
   - Crypto
 ---
+<style>
+ul{
+    text-decoration:;
+    list-style-type: circle!important;
+}
+</style>
+
 ##### <div><center><a class="highlight highlight-bb content-center" href="http://www.unbank.world ">UNBANK.WORLD Website</a></center></div>
 #### Project Overview
 I designed and developed the original unbank.world website for one of the largest Bitcoin ATM operators in the USA.

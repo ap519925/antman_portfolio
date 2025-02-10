@@ -10,6 +10,12 @@ tags:
   - Branding
   - Dev
 ---
+<style>
+ul{
+    text-decoration:;
+    list-style-type: circle!important;
+}
+</style>
 
 ##### <div><center><a class="highlight highlight-bb content-center" href="https://bearishbulls.tempurl.host/">Bearish Bulls Web app</a></center></div>
 

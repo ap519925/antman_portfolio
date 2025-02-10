@@ -12,7 +12,18 @@ tags:
   - Dev
 ---
 
+<<<<<<< HEAD
 ##### <div><center><a class="highlight highlight-bb content-center" href="http://www.intrepidmuseum.org">Intrepid Website</a></center></div>
+=======
+<style>
+ul{
+    text-decoration:;
+    list-style-type: circle!important;
+}
+</style>
+
+##### <div><center><a class="highlight highlight-bb content-center" href="http://www.intrepidmuseum.org">Intrepid Museum Drupal Website</a></center></div>
+>>>>>>> ac694c9 (ui changes and error fiuxes)
 
 #### Project Overview
 

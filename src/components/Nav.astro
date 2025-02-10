@@ -1,5 +1,10 @@
 ---
+<<<<<<< HEAD
 import Icon, { type Props as IconProps } from './Icon.astro';
+=======
+import Icon from './Icon.astro';
+import type { Props as IconProps } from './Icon.astro';
+>>>>>>> ac694c9 (ui changes and error fiuxes)
 import ThemeToggle from './ThemeToggle.astro';
 
 /** Main menu items */
@@ -21,8 +26,9 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 <nav>
 	<div class="menu-header">
 		<a href="/" class="site-title">
-			<img class="" src="/assets/alogo.png" width="150" height="150">
+			<img src="/assets/alogo.png" width="150" height="150" alt="Logo">
 		</a>
+<<<<<<< HEAD
 		
 				<button class="menu-button" aria-expanded="false">
 					<span class="sr-only">Menu</span>
@@ -32,49 +38,64 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 					</div>
 				</button>
 		
+=======
+		<menu-button>
+			<button class="menu-button" aria-expanded="false">
+				<span class="sr-only">Menu</span>
+				<div class="hamburger-icon">
+					<span class="line"></span>
+					<span class="line"></span>
+					<span class="line"></span>
+				</div>
+			</button>
+		</menu-button>
+>>>>>>> ac694c9 (ui changes and error fiuxes)
 	</div>
 	<div id="menu-content">
-		<ul class="nav-items">
-			{
-				textLinks.map(({ label, href }) => (
-					<li>
-						<a
-							aria-current={Astro.url.pathname === href}
-							class:list={[
-								'link',
-								{
-									active:
-										Astro.url.pathname === href ||
-										(href !== '/' && Astro.url.pathname.startsWith(href)),
-								},
-							]}
-							href={href}
-						>
-							{label}
-						</a>
-					</li>
-				))
-			}
-		</ul>
-		<div class="menu-footer">
-			<div class="socials">
+		<div class="menu-container">
+			<ul class="nav-items">
 				{
-					iconLinks.map(({ href, icon, label }) => (
-						<a href={href} class="social">
-							<span class="sr-only">{label}</span>
-							<Icon icon={icon} />
-						</a>
+					textLinks.map(({ label, href }) => (
+						<li>
+							<a
+								aria-current={Astro.url.pathname === href}
+								class:list={[
+									'link',
+									{
+										active:
+											Astro.url.pathname === href ||
+											(href !== '/' && Astro.url.pathname.startsWith(href)),
+									},
+								]}
+								href={href}
+							>
+								{label}
+							</a>
+						</li>
 					))
 				}
-			</div>
-			<div class="theme-toggle">
-				<ThemeToggle />
+			</ul>
+			<div class="menu-footer">
+				<div class="socials">
+					{
+						iconLinks.map(({ href, icon, label }) => (
+							<a href={href} class="social">
+								<span class="sr-only">{label}</span>
+								<Icon icon={icon} />
+							</a>
+						))
+					}
+				</div>
+				<div class="theme-toggle">
+					<ThemeToggle />
+				</div>
 			</div>
 		</div>
 	</div>
 </nav>
 
 <script>
+<<<<<<< HEAD
 	
 	const btn = document.querySelector('.menu-button')!;
 
@@ -101,31 +122,102 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 			const expanded = btn.getAttribute('aria-expanded') === 'true';
 			setExpanded(!expanded);
 		});
+=======
+	class MenuButton extends HTMLElement {
+		private btn: HTMLButtonElement;
+		private menu: HTMLElement;
+		private menuItems: NodeListOf<Element>;
+		private isExpanded: boolean = false;
+		private clickHandler: () => void;
+
+		constructor() {
+			super();
+
+			this.btn = this.querySelector('button')!;
+			this.menu = document.getElementById('menu-content')!;
+			this.menuItems = this.menu.querySelectorAll('.nav-items li, .menu-footer');
+
+			// Add item index for staggered animations
+			this.menuItems.forEach((item, index) => {
+				(item as HTMLElement).style.setProperty('--item-index', index.toString());
+			});
+
+			// Bind the click handler
+			this.clickHandler = () => this.setExpanded(!this.isExpanded);
+			this.btn.addEventListener('click', this.clickHandler);
+
+			// Reset overflow when clicking navigation links
+			const navLinks = document.querySelectorAll('a[href]');
+			navLinks.forEach(link => {
+				link.addEventListener('click', () => {
+					document.body.style.overflow = '';
+				});
+			});
+		}
+
+		private setExpanded(expand: boolean) {
+			this.isExpanded = expand;
+			this.btn.setAttribute('aria-expanded', expand ? 'true' : 'false');
+			
+			if (expand) {
+				document.body.style.overflow = 'hidden';
+				this.menu.classList.add('show');
+				// Trigger animations after a small delay
+				setTimeout(() => {
+					this.menuItems.forEach((item) => {
+						item.classList.add('show');
+					});
+				}, 100);
+			} else {
+				document.body.style.overflow = '';
+				this.menuItems.forEach((item) => {
+					item.classList.remove('show');
+				});
+				this.menu.classList.remove('show');
+			}
+		}
+
+		disconnectedCallback() {
+			// Clean up when component is removed
+			document.body.style.overflow = '';
+			this.btn.removeEventListener('click', this.clickHandler);
+		}
+	}
+	customElements.define('menu-button', MenuButton);
+>>>>>>> ac694c9 (ui changes and error fiuxes)
 </script>
 
 <style>
 	nav {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
 		z-index: 9999;
-		position: relative;
 		font-family: var(--font-brand);
 		font-weight: 500;
-		margin-bottom: 3.5rem;
 	}
 
 	.menu-header {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 		gap: 0.5rem;
-		padding: 1.5rem;
+		padding: 1rem;
 	}
 
 	.site-title {
 		display: flex;
-		gap: 0.5rem;
 		align-items: center;
+		gap: 0.5rem;
 		line-height: 1.1;
 		color: var(--gray-0);
 		text-decoration: none;
+	}
+
+	.site-title img {
+		width: 2.5rem;
+		height: 2.5rem;
 	}
 
 	.menu-button {
@@ -135,6 +227,7 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 		border: 0;
 		border-radius: 999rem;
 		padding: 0.5rem;
+<<<<<<< HEAD
 		font-size: 2.5rem;
 		color: var(--gray-300);
 		transition: all 0.3s ease;
@@ -171,6 +264,51 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 
 	.menu-button[aria-expanded='true'] {
 		color: var(--gray-0);
+=======
+		background: transparent;
+		cursor: pointer;
+		z-index: 20;
+	}
+
+	.hamburger-icon {
+		position: relative;
+		width: 1.5rem;
+		height: 1.25rem;
+	}
+
+	.line {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background: var(--gray-0);
+		transition: all 0.3s ease;
+	}
+
+	.line:nth-child(1) {
+		top: 0;
+	}
+
+	.line:nth-child(2) {
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.line:nth-child(3) {
+		bottom: 0;
+	}
+
+	.menu-button[aria-expanded='true'] .line:nth-child(1) {
+		transform: translateY(0.5rem) rotate(45deg);
+	}
+
+	.menu-button[aria-expanded='true'] .line:nth-child(2) {
+		opacity: 0;
+	}
+
+	.menu-button[aria-expanded='true'] .line:nth-child(3) {
+		transform: translateY(-0.5rem) rotate(-45deg);
+>>>>>>> ac694c9 (ui changes and error fiuxes)
 	}
 
 	#menu-content {
@@ -179,17 +317,21 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: rgba(37, 36, 58, 0.95);
-		backdrop-filter: blur(10px);
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
+		background: hsla(233, 47%, 18%, 0.75);
+		backdrop-filter: blur(1rem);
 		opacity: 0;
 		visibility: hidden;
+<<<<<<< HEAD
 		pointer-events: auto;
 		transition: all 0.3s ease;
 		padding: 2rem;
+=======
+		transition: all 0.3s ease-in-out;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-top: 5rem;
+>>>>>>> ac694c9 (ui changes and error fiuxes)
 	}
 
 	#menu-content.show {
@@ -198,23 +340,53 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 		pointer-events: auto;
 	}
 
+	.menu-container {
+		width: 100%;
+		max-width: 32rem;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 3rem;
+		padding: 0 2rem;
+		margin-top: -5rem;
+	}
+
 	.nav-items {
 		margin: 0;
 		display: flex;
 		flex-direction: column;
 		gap: 2rem;
 		font-size: var(--text-2xl);
-		line-height: 1.2;
-		list-style: none;
-		padding: 2rem;
 		text-align: center;
+		list-style: none;
+		padding: 0;
+		width: 100%;
+		flex: 1;
+		justify-content: center;
+	}
+
+	.nav-items li {
+		opacity: 0;
+		transform: translateY(1rem);
+		transition: all 0.3s ease;
+		transition-delay: calc(var(--item-index) * 0.1s);
+	}
+
+	.nav-items li.show {
+		opacity: 1;
+		transform: translateY(0);
 	}
 
 	.link {
-		display: inline-block;
+		display: block;
 		color: var(--gray-300);
 		text-decoration: none;
+		font-size: var(--text-2xl);
+		padding: 0.5rem;
 		transition: all 0.3s ease;
+		position: relative;
 	}
 
 	.link:hover,
@@ -227,35 +399,68 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 		color: var(--accent-regular);
 	}
 
+	.link::before {
+		content: '';
+		position: absolute;
+		width: 0;
+		height: 2px;
+		bottom: 0;
+		left: 50%;
+		background-color: var(--accent-regular);
+		transition: all 0.3s ease;
+		transform: translateX(-50%);
+	}
+
+	.link:hover::before,
+	.link:focus::before,
+	.link.active::before {
+		width: 100%;
+	}
+
 	.menu-footer {
-		--icon-size: var(--text-xl);
-		--icon-padding: 0.5rem;
+		opacity: 0;
+		transform: translateY(1rem);
+		transition: all 0.3s ease;
+		transition-delay: calc(var(--item-index) * 0.1s);
 		display: flex;
 		flex-direction: column;
-		gap: 2rem;
 		align-items: center;
+		gap: 2rem;
+		width: 100%;
+		padding-top: 2rem;
+		border-top: 1px solid var(--gray-800);
+	}
+
+	.menu-footer.show {
+		opacity: 1;
+		transform: translateY(0);
 	}
 
 	.socials {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 1.5rem;
-		font-size: var(--icon-size);
+		gap: 2rem;
+		font-size: var(--text-xl);
+		justify-content: center;
 	}
 
 	.social {
+		color: var(--gray-300);
 		display: flex;
-		padding: var(--icon-padding);
+		padding: 0.5rem;
 		text-decoration: none;
-		color: var(--accent-dark);
-		transition: color var(--theme-transition);
+		transition: all 0.3s ease;
+		border-radius: 50%;
 	}
 
 	.social:hover,
 	.social:focus {
-		color: var(--accent-text-over);
+		color: var(--gray-0);
+		transform: translateY(-3px);
+		background: var(--gradient-subtle);
 	}
 
+<<<<<<< HEAD
 	
 
 	@media (min-width: 60em) {
@@ -263,6 +468,29 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 			display: flex;
 			justify-content: flex-end;
 			gap: 0;
+=======
+	@media (min-width: 50em) {
+		.menu-header {
+			padding: 1.5rem 2rem;
+		}
+
+		.site-title img {
+			width: 3rem;
+			height: 3rem;
+		}
+
+		.menu-container {
+			max-width: 40rem;
+			padding: 0 4rem;
+		}
+
+		.nav-items {
+			gap: 2.5rem;
+		}
+
+		.link {
+			font-size: var(--text-2xl);
+>>>>>>> ac694c9 (ui changes and error fiuxes)
 		}
 	}
 </style>

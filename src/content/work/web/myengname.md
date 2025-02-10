@@ -10,6 +10,14 @@ tags:
   - Dev
   - Language
 ---
+
+<style>
+ul{
+    text-decoration:;
+    list-style-type: circle!important;
+}
+</style>
+
 ##### <div><center><a class="highlight-eng highlight" href="http://www.myengname.com"> MyEngName.com</a></center></div>
 #### Project Overview
 I designed and developed a web app that uses JS and PHP to take user information such as: name, DOB, country of interest & traits in order to give them an english name

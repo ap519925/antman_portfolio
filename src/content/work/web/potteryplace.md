@@ -10,6 +10,14 @@ tags:
   - Dev
   - WordPress
 ---
+
+<style>
+ul{
+    text-decoration:;
+    list-style-type: circle!important;
+}
+</style>
+
 ##### <div><center><a class="highlight-pp highlight" href="http://www.thepotteryplace.com">The Pottery Place</a></center></div>
 #### Project Overview
 My family owns a paint your own pottery studio in Albany NY called The Pottery Place. Back when they had just recently purchased the studio I was tasked with redesigning the website

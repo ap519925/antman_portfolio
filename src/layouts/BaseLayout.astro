@@ -65,7 +65,9 @@ const { title, description } = Astro.props;
 		<div id="swup">
 			<div class="stack backgrounds">
 				<Nav />
-				<slot />
+				<div style="padding-top: 10rem;">
+					<slot />
+				</div>
 				<Footer />
 			</div>
 		</div>
