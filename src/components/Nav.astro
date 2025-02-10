@@ -80,21 +80,31 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 
 <script>
 	class MenuButton extends HTMLElement {
-		private btn: HTMLButtonElement;
-		private menu: HTMLElement;
-		private menuItems: NodeListOf<Element>;
+		private btn: HTMLButtonElement | null = null;
+		private menu: HTMLElement | null = null;
+		private menuItems: NodeListOf<Element> | null = null;
 		private isExpanded: boolean = false;
-		private clickHandler: () => void;
-		private linkClickHandlers: Map<HTMLElement, () => void> = new Map();
+		private clickHandler: ((e: Event) => void) | null = null;
+		private documentClickHandler: ((e: Event) => void) | null = null;
+		private escapeHandler: ((e: KeyboardEvent) => void) | null = null;
 
 		constructor() {
 			super();
-			this.initialize();
+			// Defer initialization to connectedCallback
 		}
 
 		private initialize() {
-			this.btn = this.querySelector('button')!;
-			this.menu = document.getElementById('menu-content')!;
+			// Only initialize once
+			if (this.btn) return;
+
+			this.btn = this.querySelector('button');
+			this.menu = document.getElementById('menu-content');
+			
+			if (!this.btn || !this.menu) {
+				console.error('Required elements not found');
+				return;
+			}
+
 			this.menuItems = this.menu.querySelectorAll('.nav-items li, .menu-footer');
 
 			// Add item index for staggered animations
@@ -102,79 +112,101 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 				(item as HTMLElement).style.setProperty('--item-index', index.toString());
 			});
 
-			// Bind the click handler
-			this.clickHandler = () => this.setExpanded(!this.isExpanded);
-			this.btn.addEventListener('click', this.clickHandler);
+			// Initialize handlers
+			this.clickHandler = (e: Event) => {
+				e.stopPropagation();
+				this.toggleMenu();
+			};
 
-			// Reset overflow and close menu when clicking navigation links
-			const navLinks = document.querySelectorAll('a[href]');
-			navLinks.forEach(link => {
-				const handler = () => {
-					this.setExpanded(false);
-					document.body.style.overflow = '';
-				};
-				this.linkClickHandlers.set(link as HTMLElement, handler);
-				link.addEventListener('click', handler);
-			});
-
-			// Close menu on escape key
-			document.addEventListener('keydown', (e) => {
-				if (e.key === 'Escape' && this.isExpanded) {
-					this.setExpanded(false);
-				}
-			});
-
-			// Close menu when clicking outside
-			document.addEventListener('click', (e) => {
+			this.documentClickHandler = (e: Event) => {
 				if (this.isExpanded && !this.contains(e.target as Node)) {
-					this.setExpanded(false);
+					this.closeMenu();
 				}
+			};
+
+			this.escapeHandler = (e: KeyboardEvent) => {
+				if (e.key === 'Escape' && this.isExpanded) {
+					this.closeMenu();
+				}
+			};
+
+			// Add event listeners
+			this.btn.addEventListener('click', this.clickHandler);
+			document.addEventListener('click', this.documentClickHandler);
+			document.addEventListener('keydown', this.escapeHandler);
+
+			// Handle navigation link clicks
+			const navLinks = this.menu.querySelectorAll('a[href]');
+			navLinks.forEach(link => {
+				link.addEventListener('click', () => this.closeMenu());
 			});
 		}
 
-		private setExpanded(expand: boolean) {
-			if (this.isExpanded === expand) return;
+		private toggleMenu() {
+			this.isExpanded ? this.closeMenu() : this.openMenu();
+		}
+
+		private openMenu() {
+			if (!this.btn || !this.menu || !this.menuItems) return;
+
+			this.isExpanded = true;
+			this.btn.setAttribute('aria-expanded', 'true');
+			document.body.style.overflow = 'hidden';
 			
-			this.isExpanded = expand;
-			this.btn.setAttribute('aria-expanded', expand ? 'true' : 'false');
+			// Show menu with a slight delay for the transition
+			this.menu.classList.add('show');
 			
-			if (expand) {
-				document.body.style.overflow = 'hidden';
-				this.menu.classList.add('show');
-				// Trigger animations after a small delay
-				requestAnimationFrame(() => {
-					this.menuItems.forEach((item) => {
-						item.classList.add('show');
-					});
+			// Animate menu items
+			requestAnimationFrame(() => {
+				this.menuItems?.forEach(item => {
+					item.classList.add('show');
 				});
-			} else {
-				document.body.style.overflow = '';
-				this.menuItems.forEach((item) => {
-					item.classList.remove('show');
-				});
-				this.menu.classList.remove('show');
-			}
+			});
+		}
+
+		private closeMenu() {
+			if (!this.btn || !this.menu || !this.menuItems) return;
+
+			this.isExpanded = false;
+			this.btn.setAttribute('aria-expanded', 'false');
+			document.body.style.overflow = '';
+
+			// Remove show class from menu items first
+			this.menuItems.forEach(item => {
+				item.classList.remove('show');
+			});
+
+			// Remove show class from menu after animation
+			setTimeout(() => {
+				if (!this.isExpanded) { // Check again to prevent race conditions
+					this.menu?.classList.remove('show');
+				}
+			}, 300); // Match the CSS transition duration
 		}
 
 		connectedCallback() {
-			// Re-initialize when component is added to the DOM
-			this.initialize();
+			requestAnimationFrame(() => {
+				this.initialize();
+			});
 		}
 
 		disconnectedCallback() {
-			// Clean up when component is removed
+			if (this.btn && this.clickHandler) {
+				this.btn.removeEventListener('click', this.clickHandler);
+			}
+			if (this.documentClickHandler) {
+				document.removeEventListener('click', this.documentClickHandler);
+			}
+			if (this.escapeHandler) {
+				document.removeEventListener('keydown', this.escapeHandler);
+			}
 			document.body.style.overflow = '';
-			this.btn.removeEventListener('click', this.clickHandler);
-			
-			// Remove all link click handlers
-			this.linkClickHandlers.forEach((handler, link) => {
-				link.removeEventListener('click', handler);
-			});
-			this.linkClickHandlers.clear();
 		}
 	}
-	customElements.define('menu-button', MenuButton);
 
+	if (!customElements.get('menu-button')) {
+		customElements.define('menu-button', MenuButton);
+	}
 </script>
 
 <style>
