@@ -21,11 +21,21 @@ ul{
 
 #### Project Overview
 
-I designed and developed a PWA that serves as a social platform for the bearish bulls trading group. It features, live chat, user profiles, like button, posting, financial market data, integrated technical analysis charting and much more.
+ - Architected and built a subscription-based Progressive Web App (PWA) that delivers live market data, real-time trade ideas, charting tools, and live chat functionality to traders worldwide.
+ - Integrated multiple APIs to display financial market data, creating a seamless user experience for traders and investors.
+ - Dveloped custom WordPress plugin to easily convert WordPress instance into fully customizable PWA
+ - Optimized app performance by implementing caching mechanisms and reducing API call overhead, resulting in faster load times and improved user satisfaction.
+ - Provided ongoing maintenance and feature enhancements, ensuring the platform remained cutting-edge and responsive to user needs.
+ - Developed technical indicators for use on the TradingView platform using Pinescript
+
 
 ##### Project Scope:
 
 - Developed and designed PWA based on WordPress CMS pulling in financial market data from various sources
+
+##### Key Technologies:
+
+- React.js, PHP, JavaScript, Financial data APIs, Charting Libraries, PWA, WordPress CMS, PineScript
 
 <script type="module" src="../../../scripts/fslightbox.js"></script>
 

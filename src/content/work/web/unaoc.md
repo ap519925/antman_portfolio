@@ -12,9 +12,6 @@ tags:
   - WordPress
 ---
 
-
-##### <div><center><a class="highlight highlight-unaoc" href="https://8thglobalforum.unaoc.org/">8th Forum Website</a></center></div>
-
 <style>
 ul{
     text-decoration:;
@@ -31,13 +28,16 @@ ul{
 <br>
 
 #### Project Overview
-I was hired on as a Web Development & Design Consultant in order to develop/design a WordPress website + native mobile application for UNAOC's 8th global forum, it was a great experience that I really enjoyed.
+As a Front-End Developer Consultant for the United Nations Alliance of Civilizations (UNAOC), I developed a WordPress website, Mobile application and custom plugins for their 8th global forum.
 
-##### Project Scope:
- - Developed custom WordPress themes & Plugins using: PHP, JS, HTML5, CSS3, & SASS for UNAOC's 8th global forum
- - Designed & assisted in development of a native mobile application for UNAOC’s 8th global forum
- - Used the Adobe Creative Suite to design 8th Global Forum promo material for both print and digital usage
+##### Key contributions:
+- **WordPress Development**: Designed and developed WordPress themes and custom plugins using PHP, JavaScript, and SASS.
+- **Mobile App Design**: Assisted in the development of a native mobile application for UNAOC’s 8th Global Forum.
+- **Promotional Materials**: Designed promotional materials for print and digital usage using Adobe Creative Suite.
 
+
+##### Technologies Used: 
+WordPress, PHP, JavaScript, HTML5, CSS3, SASS, Adobe Creative Suite, Java, 
 
 
 ## <center>App Screens</center>

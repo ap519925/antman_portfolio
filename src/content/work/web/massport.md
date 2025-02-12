@@ -18,23 +18,22 @@ ul{
 
 
 ##### <div><center><a class="highlight highlight-bb content-center" href="http://www.massport.com">Massport Website</a></center></div>
-
+<br>
 #### Project Overview
 
- - Spearheaded development efforts for multiple Drupal 10 web properties , leveraging tools like Lando , Acquia Cloud , and GitHub to implement code changes in PHP, CSS, JS, and React.
- - Designed and implemented a bug/feature request ticketing system using GitHub Issues and templates, streamlining workflows and enabling seamless communication with stakeholders.
- - Rewrote React-based flight tracker application, introducing complex logic to display dynamic banners based on real-time flight statuses (e.g., arriving early, delayed, canceled).
- - Optimized site performance by integrating Datadog, Imperva, and Google Analytics, reducing unnecessary API requests by 60% and significantly lowering operational costs.
- - Automated deployment workflows across local, dev, staging, and production environments using GitHub Actions and Acquia Cloud .
- 
+As a Drupal Developer at Jacobs Solutions (Massport), I led the development and optimization of multiple Drupal 10 web properties, ensuring high performance, security, and user engagement.
 
-##### Project Scope:
+##### Key contributions:
+ - **React Application Development:** Reworked a React-based flight tracker application, implementing complex logic to display real-time flight status updates (e.g., arriving early, delayed, canceled).
+ - **Theming and style updates:** Updated various sections of website's theme and implemented a responsive design where needed, using Twig & PatternLab.
+ - **API Integration:** Rewrote a React bus locator application, integrating real-time data from multiple APIs/proxy servers, reducing API requests by 60% and generating significant cost savings.
+ - **Performance Optimization:** Utilized tools like Datadog, Imperva, and Google Analytics to monitor and optimize website performance, reducing unnecessary page visits and improving efficiency.
+ - **Workflow Streamlining:** Implemented a GitHub-based ticketing system for bug/feature requests, streamlining workflows and enabling seamless collaboration with cross-functional teams.
+ - **Deployment & Maintenance:** Automated deployment workflows across local, dev, staging, and production environments using GitHub Actions and Acquia Cloud.
 
- - Support & develop new features for Massports new Drupal 10 website as well as various React web applications that also live on the website.
 
-##### Key Technologies:
-
- - Drupal 10, React.js, SASS, Webpack, Gulp, Acquia Cloud, Datadog, Google Analytics, Patternlab
+##### Technologies Used: 
+Drupal 10, React.js, PHP, JavaScript, Acquia Cloud, GitHub, Datadog, Google Analytics, Webpack, Gulp, SASS, Twig, SQL, JSX
 
 <script type="module" src="../../../scripts/fslightbox.js"></script>
 

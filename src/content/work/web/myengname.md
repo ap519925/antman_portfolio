@@ -19,12 +19,38 @@ ul{
 </style>
 
 ##### <div><center><a class="highlight-eng highlight" href="http://www.myengname.com"> MyEngName.com</a></center></div>
-#### Project Overview
-I designed and developed a web app that uses JS and PHP to take user information such as: name, DOB, country of interest & traits in order to give them an english name
+<br>
 
-##### Project Scope:
- - Used CSS3 & HTML5 to design this web app
- - used PHP/JS to create form that takes user info and returns an english name based on what they hav entered
+#### Project Overview
+
+I designed and developed a web app that uses JS and PHP to take user information such as: name, DOB, country of interest & traits in order to give them an english name based on the information they entered and questions they answered.
+
+##### Key contributions:
+ - **PHP:** Wrote a PHP script that takes user information such as: name, DOB, country of interest & traits in order to give them an english name based on the information they entered and questions they answered.
+ - **Theming** Designed and implemented the entire web application using CSS3 + Bootstrap for responsiveness.
+ - **API Integration:** Used large names API to generate english names.
+ - **JavaScript**: Used for menu, navigation, and form validation as well as effects.
+
+
+##### Technologies Used: 
+PHP, JavaScript, CSS3, HTML5, Bootstrap, Chinese Language
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <script type="module" src="../../../scripts/fslightbox.js"></script>
 
