@@ -125,6 +125,12 @@ const projects = (await getCollection('work'))
 						<li class="mention-card osc">
 							<a href href="https://www.osc.state.ny.us/" target="_blank"><img src="/assets/osc.png" loading="lazy"></a>
 						</li>
+						<li class="mention-card jacobs">
+							<a href href="https://www.jacobs.com/" target="_blank"><img src="/assets/jacobs.png" loading="lazy"></a>
+						</li>
+						<li class="mention-card intrepid">
+							<a href href="https://www.intrepidmuseum.org/" target="_blank"><img src="/assets/intrepidlogo.jpg" loading="lazy"></a>
+						</li>
 					</Grid>
 				</div>
 			</section>
@@ -266,8 +272,8 @@ const projects = (await getCollection('work'))
 		justify-content: center;
 		align-items: center;
 		text-align: center;
-		border: 1px inset var(--gray-800);
-		border-radius: 1.5rem;
+
+		border-radius: 0.5rem;
 		color: var(--gray-300);
 		background: rgba(0,0,0,0.5);
 		box-shadow: var(--shadow-sm);
@@ -289,7 +295,7 @@ const projects = (await getCollection('work'))
 
 	@media (min-width: 50em) {
 		.mention-card {
-			border-radius: 1.5rem;
+			border-radius: 0.5rem;
 			height: 9.5rem;
 		}
 	}
