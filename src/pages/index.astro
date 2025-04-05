@@ -37,6 +37,25 @@ const projects = (await getCollection('work'))
 						<Pill><Icon icon="microphone-stage" size="1.33em" /> Financial market Enthusiast</Pill>
 						<Pill><Icon icon="rocket-launch" size="1.33em" /> Gamer</Pill>
 					</div>
+					
+					<div class="cert-badge">
+						<a href="/assets/ant_certified_funded.jpg" data-fslightbox="certification" data-type="image">
+							<img 
+								src="/assets/ant_certified_funded_thumb.jpg" 
+								alt="Certified Funded Trader Badge"
+								loading="lazy"
+								width="400"
+								height="300"
+								class="cursor-zoom-in"
+							/>
+						</a>
+					</div>
+					<script>
+						// Initialize lightbox after DOM loads
+						document.addEventListener('DOMContentLoaded', () => {
+							window.refreshFsLightbox?.();
+						});
+					</script>
 				</Hero>
 
 				<img class="hero-img"
@@ -155,6 +174,13 @@ const projects = (await getCollection('work'))
 		display: none;
 	}
 
+	.cert-badge img {
+		max-width: 200px;
+		border-radius: 1rem;
+		box-shadow: var(--shadow-md);
+		margin-top: 1rem;
+	}
+
 	.hero img {
 		aspect-ratio: 5 / 4;
 		object-fit: cover;
@@ -175,6 +201,11 @@ const projects = (await getCollection('work'))
 			margin-top: 0.5rem;
 			display: flex;
 			gap: 0.5rem;
+		}
+
+		.cert-badge img {
+			max-width: 280px;
+			margin-top: 1.5rem;
 		}
 
 		.hero img {
